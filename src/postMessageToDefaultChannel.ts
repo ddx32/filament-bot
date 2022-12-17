@@ -7,7 +7,7 @@ const API_BASE = 'https://slack.com/api'
 export async function postMessageToDefaultChannel(filaments: FilamentObject[]) {
   const message = {
     channel: CHANNEL_ID,
-    ...generateMessage(filaments),
+    ...generateMessage(filaments, true),
   };
 
   const options = {

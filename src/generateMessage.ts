@@ -14,20 +14,29 @@ function generateBlocks(filaments: FilamentObject[]) {
   }));
 }
 
-const startingBlocks = [
-  {
-    type: "section",
-    text: {
-      type: "mrkdwn",
-      text: ":man-raising-hand: Hello, today's filament menu is:",
-    },
-  },
-  {
-    type: "divider",
-  },
-];
+function getInitialBlocks(scheduled: boolean) {
+  const welcomeMessage = scheduled
+    ? ":clock2: Hey, it's almost time to go get some new filament spools. Here's what's available today:"
+    : ":man-raising-hand: Hello, here's what's currently available:";
 
-export function generateMessage(filaments: FilamentObject[]) {
+  return [
+    {
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: welcomeMessage,
+      },
+    },
+    {
+      type: "divider",
+    },
+  ];
+}
+
+export function generateMessage(
+  filaments: FilamentObject[],
+  scheduled = false,
+) {
   if (filaments.length <= 0) {
     return {
       text: "Today, life is not good.",
@@ -35,6 +44,6 @@ export function generateMessage(filaments: FilamentObject[]) {
   }
 
   return {
-    blocks: [...startingBlocks, ...generateBlocks(filaments)],
+    blocks: [...getInitialBlocks(scheduled), ...generateBlocks(filaments)],
   };
 }
