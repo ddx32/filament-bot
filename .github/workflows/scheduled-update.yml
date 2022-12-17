@@ -1,0 +1,10 @@
+name: Scheduled default channel update
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 13 * * 2,4'
+jobs:
+  Update-Channel:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -X POST ${{secrets.DEPLOYMENT_URL}}/update-channel
