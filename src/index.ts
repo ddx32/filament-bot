@@ -1,10 +1,11 @@
 import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
-import { load } from "https://deno.land/std/dotenv/mod.ts";
+import { load } from "https://deno.land/std@0.168.0/dotenv/mod.ts";
 
-import { generateMessage } from "./generateMessage.ts";
-import { postMessageToDefaultChannel } from "./postMessageToDefaultChannel.ts";
+import { generateMessage } from "./modules/generateMessage.ts";
+import { postMessageToDefaultChannel } from "./modules/postMessageToDefaultChannel.ts";
+import { FilamentObject } from "./types.ts";
 
-await load({export: true});
+await load({ export: true });
 
 const filaments: FilamentObject[] = [
   {

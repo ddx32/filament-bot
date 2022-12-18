@@ -1,3 +1,5 @@
+import { FilamentObject } from "../types.ts";
+
 function generateBlocks(filaments: FilamentObject[]) {
   return filaments.map((filament) => ({
     type: "section",

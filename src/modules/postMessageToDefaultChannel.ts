@@ -1,8 +1,9 @@
 import { generateMessage } from "./generateMessage.ts";
+import { FilamentObject } from "../types.ts";
 
 const SLACK_TOKEN = Deno.env.get("SLACK_TOKEN");
 const CHANNEL_ID = Deno.env.get("CHANNEL_ID");
-const API_BASE = 'https://slack.com/api'
+const API_BASE = "https://slack.com/api";
 
 export async function postMessageToDefaultChannel(filaments: FilamentObject[]) {
   const message = {
@@ -21,9 +22,9 @@ export async function postMessageToDefaultChannel(filaments: FilamentObject[]) {
 
   const response = await fetch(
     `${API_BASE}/chat.postMessage`,
-    options
+    options,
   );
 
   const responseJson = await response.json();
-  console.log(responseJson)
+  console.log(responseJson);
 }

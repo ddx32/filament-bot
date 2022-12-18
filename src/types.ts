@@ -1,5 +1,5 @@
-declare type FilamentObject = {
+export type FilamentObject = {
   name: string;
   stockAmount: number;
   imageUrl: string;
-};
+}
