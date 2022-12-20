@@ -6,7 +6,7 @@ function generateBlocks(filaments: FilamentObject[]) {
     text: {
       type: "mrkdwn",
       text:
-        `*${filament.name}*\n\nStock amount: *${filament.stockAmount.toString()}*`,
+        `*${filament.name}*\n\nMaterial: ${filament.type}\n\nStock amount: *${filament.stockAmount.toString()}*`,
     },
     accessory: {
       type: "image",
