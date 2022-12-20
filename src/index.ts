@@ -3,22 +3,12 @@ import { load } from "https://deno.land/std@0.168.0/dotenv/mod.ts";
 
 import { generateMessage } from "./modules/generateMessage.ts";
 import { postMessageToDefaultChannel } from "./modules/postMessageToDefaultChannel.ts";
-import { FilamentObject } from "./types.ts";
+import { fetchFilaments } from "./modules/fetchFilaments.ts";
 
 await load({ export: true });
 
-const filaments: FilamentObject[] = [
-  {
-    name: "Prusament Gentlemans blue PLA",
-    stockAmount: 25,
-    imageUrl: "https://cdn.prusa3d.com/content/images/product/default/4704.png",
-  },
-  {
-    name: "Prusament PLA Blend My Silverness",
-    stockAmount: 15,
-    imageUrl: "https://cdn.prusa3d.com/content/images/product/default/4629.jpg",
-  },
-];
+const filaments = await fetchFilaments();
+console.log(filaments);
 
 serve(async (_req) => {
   const requestUrl = new URL(_req.url);
