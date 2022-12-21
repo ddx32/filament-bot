@@ -41,11 +41,11 @@ function getRandomStringFromArray(array: string[]) {
 
 function getNoStockMessageBlocks() {
   const images = [
-    "https://media.giphy.com/media/Az1CJ2MEjmsp2/giphy.gif",
-    "https://media.giphy.com/media/26hkhPJ5hmdD87HYA/giphy.gif",
-    "https://media.giphy.com/media/giXLnhxp60zEEIkq8K/giphy-downsized-large.gif",
-    "https://media.giphy.com/media/g01ZnwAUvutuK8GIQn/giphy.gif",
-    "https://media.giphy.com/media/baPIkfAo0Iv5K/giphy.gif"
+    "https://media.giphy.com/media/Az1CJ2MEjmsp2/giphy-downsized.gif",
+    "https://media.giphy.com/media/26hkhPJ5hmdD87HYA/giphy-downsized.gif",
+    "https://media.giphy.com/media/giXLnhxp60zEEIkq8K/giphy-downsized.gif",
+    "https://media.giphy.com/media/g01ZnwAUvutuK8GIQn/giphy-downsized.gif",
+    "https://media.giphy.com/media/baPIkfAo0Iv5K/giphy-downsized.gif"
   ];
 
   return [
