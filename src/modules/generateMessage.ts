@@ -16,9 +16,22 @@ function generateBlocks(filaments: FilamentObject[]) {
   }));
 }
 
+function getRandomStringFromArray(array: string[]) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+const scheduledMessages = [
+  ":clock2: Hey, it's almost time to go get some new filament spools. Here's what's available today:",
+  "Is your office running out of filament? Show your workmates some gratitude by fetching some fresh spools now! Currently on tap:",
+  "Don't forget to help the Polymers team get rid of some 2nd grade filament spools! Feel free to choose from these beauties:",
+  "Time to get up and stretch, it's good for your body, mind, and productivity. AND you can get some free filaments! Here's what's available right now:",
+  "Not ready to spend those Prusameters for the perfect spool yet? Bridge the gap with some 2nd grade stuff. Now available:",
+  "How many kilograms of spools can you carry with your bare hands? Today's offer is extra spicy, don't you think?"
+]
+
 function getInitialBlocks(scheduled: boolean) {
   const welcomeMessage = scheduled
-    ? ":clock2: Hey, it's almost time to go get some new filament spools. Here's what's available today:"
+    ? getRandomStringFromArray(scheduledMessages)
     : ":man-raising-hand: Hello, here's what's currently available:";
 
   return [
@@ -33,10 +46,6 @@ function getInitialBlocks(scheduled: boolean) {
       type: "divider",
     },
   ];
-}
-
-function getRandomStringFromArray(array: string[]) {
-  return array[Math.floor(Math.random() * array.length)];
 }
 
 function getNoStockMessageBlocks() {
