@@ -29,6 +29,13 @@ const scheduledMessages = [
   "How many kilograms of spools can you carry with your bare hands? Today's offer is extra spicy, don't you think?"
 ]
 
+const noFilamentMessages = [
+  "Today, life is not good. It seems that the polymers team has a whole bunch of nothing for us today.",
+  "Do you feel the void? No filaments are available. What a scam.",
+  "Were you already headed to get some filaments? Not so fast! There's nothing available for us peasants today.",
+  "You might wanna reconsider printing that 20+ hour flower pot this weekend. Unless you want to buy your own filament, cause there's nothing for ya today."
+]
+
 function getInitialBlocks(scheduled: boolean) {
   const welcomeMessage = scheduled
     ? getRandomStringFromArray(scheduledMessages)
@@ -67,8 +74,7 @@ function getNoStockMessageBlocks() {
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text":
-          "Today, life is not good. It seems that the polymers team has a whole bunch of nothing for us today. Try fetching the inventory status closer to the official pick-up time (Tuesday, Thursday 13:30 - 14:30).",
+        "text": getRandomStringFromArray(noFilamentMessages)
       },
     },
     {
