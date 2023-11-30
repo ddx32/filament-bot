@@ -5,8 +5,10 @@ import { generateMessage } from "./modules/generateMessage.ts";
 import { postMessageToDefaultChannel } from "./modules/postMessageToDefaultChannel.ts";
 import { fetchFilaments } from "./modules/fetchFilaments.ts";
 
-// Load cron jobs
-import "./cron.ts";
+Deno.cron("Update default channel", "*/15 * * * *", async () => {
+  const filaments = await fetchFilaments();
+  await postMessageToDefaultChannel(filaments);
+});
 
 await load({ export: true });
 
