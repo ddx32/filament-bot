@@ -5,6 +5,9 @@ import { generateMessage } from "./modules/generateMessage.ts";
 import { postMessageToDefaultChannel } from "./modules/postMessageToDefaultChannel.ts";
 import { fetchFilaments } from "./modules/fetchFilaments.ts";
 
+// Load cron jobs
+import "./cron.ts";
+
 await load({ export: true });
 
 const filaments = await fetchFilaments();
