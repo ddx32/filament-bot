@@ -102,6 +102,17 @@ function getNoStockMessageBlocks() {
     "https://media.giphy.com/media/W0c3xcZ3F1d0EYYb0f/giphy-downsized.gif",
     "https://media.giphy.com/media/SUzPI5wAkp6UXMEkok/giphy.gif",
     "https://media.giphy.com/media/3o6Ztrk67E3iKaZyiA/giphy.gif",
+    "https://media.giphy.com/media/26BRQyd2gZASrXy3C/giphy.gif",
+    "https://media.giphy.com/media/9QvuoiiT6SBtm/giphy.gif",
+    "https://media.giphy.com/media/sB5San4kPup34VKN9Z/giphy.gif",
+    "https://media.giphy.com/media/8xWyNRTuF3F1C/giphy.gif",
+    "https://media.giphy.com/media/jmeAW1a0p3IR2/giphy.gif",
+    "https://media.giphy.com/media/ARzxdvNXtNsg8/giphy.gif",
+    "https://media.giphy.com/media/XqpnXaeZPnupy/giphy.gif",
+    "https://media.giphy.com/media/8XUDM7mFZ06MxgGWEu/giphy.gif",
+    "https://media.giphy.com/media/DAbOleBafSvJeOtljq/giphy.gif",
+    "https://media.giphy.com/media/22CEvbj04nLLq/giphy.gif",
+    "https://media.giphy.com/media/l0MYrqggEwtDscVP2/giphy.gif",
   ];
 
   return [
